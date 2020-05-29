@@ -150,13 +150,12 @@ html, body {
 
 .gallery {
   background-color: #FAFAFA;
-  padding: 0 1rem;
+  padding: 0 1rem 2rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 2rem;
 }
 
 .gallery__header {
@@ -178,7 +177,11 @@ html, body {
 .contact__header {
   font-family: Avenir-Bold;
   font-size: 1.5rem;
-  margin: 0.625rem 0 2rem 0;
+  margin: 0.625rem 0 1.5rem 0;
+}
+
+.contact__header h2 {
+  margin: 1rem 0;
 }
 
 .contact__icons {
@@ -189,6 +192,7 @@ html, body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .contact__logo {
@@ -196,13 +200,14 @@ html, body {
 }
 
 .contact__person {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 .contact__sub-header h4 {
-  font-family: Avenir-Bold;
+  font-family: Avenir-Demi;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
 }
 
 .contact__details {
@@ -212,19 +217,20 @@ html, body {
 .contact__details p {
   font-family: Avenir-Regular;
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
 }
 
 .contact__email {
   font-family: Avenir-Regular;
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .contact__copyright {
   font-family: Avenir-Regular;
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   width: 70%;
 }
 
@@ -315,7 +321,7 @@ html, body {
     margin: 0;
   }
   .gallery {
-    padding: 0 0.75rem;
+    padding: 0 0.75rem 1.75rem 0.75rem;
   }
   .gallery__header {
     margin: 2.5rem 0;
@@ -330,8 +336,9 @@ html, body {
         flex-wrap: wrap;
   }
   .gallery__image {
-    width: 30%;
-    margin: 1.66%;
+    width: 30.108%;
+    height: 28.064%;
+    margin: 1.613%;
   }
   .contact {
     display: -webkit-box;
@@ -341,7 +348,7 @@ html, body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0 1.5rem;
+    padding: 1.15rem 1.5rem 1.5rem 1.5rem;
   }
   .contact__top-items {
     display: -webkit-box;
@@ -380,6 +387,22 @@ html, body {
   }
   .contact__person {
     margin: 0;
+    width: 14rem;
+  }
+  .contact__sub-header h4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .contact__details p {
+    font-size: 0.875rem;
+  }
+  .contact__email {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  .contact__copyright {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

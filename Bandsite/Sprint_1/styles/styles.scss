@@ -99,10 +99,10 @@ html, body {
 
 .gallery {
   background-color: #FAFAFA;
-  padding: 0 1rem;
+  padding: 0 1rem 2rem 1rem;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
   &__header{
     margin: 2rem 0 1rem 0;
     font-family: Avenir-Bold;
@@ -120,23 +120,30 @@ html, body {
   &__header {
     font-family: Avenir-Bold;
     font-size: 1.5rem;
-    margin: 0.625rem 0 2rem 0;
+    margin: 0.625rem 0 1.5rem 0;
+    h2 {
+      margin: 1rem 0;
+    }
   }
   &__icons {
     display: flex;
     width: 8.125rem;
     justify-content: space-between;
+    margin-bottom: 2rem;
   }
   &__logo {
     display: none;
   }
   &__person {
-    margin: 2rem 0;
+    margin: 1.5rem 0;
   }
-  &__sub-header h4 {
-    font-family: Avenir-Bold;
+  &__sub-header {
+    h4 {
+    font-family: Avenir-Demi;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    }
   }
   &__details {
     margin: 1rem 0;
@@ -145,18 +152,19 @@ html, body {
     p {
       font-family: Avenir-Regular;
       margin: 0;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
     }
   }
   &__email {
     font-family: Avenir-Regular;
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
   &__copyright {
     font-family: Avenir-Regular;
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     width: 70%;
   }
 }
@@ -238,7 +246,7 @@ html, body {
     }
   }
   .gallery {
-    padding: 0 0.75rem;
+    padding: 0 0.75rem 1.75rem 0.75rem;
     &__header {
       margin: 2.5rem 0;
       padding-left: 0.75rem;
@@ -249,14 +257,15 @@ html, body {
       flex-wrap: wrap;
     }
     &__image {
-      width: 30%;
-      margin: 1.66%;
+      width: 30.108%;
+      height: 28.064%;
+      margin: 1.613%;
     }
   }
   .contact {
     display: flex;
     flex-direction: column;
-    padding: 0 1.5rem;
+    padding: 1.15rem 1.5rem 1.5rem 1.5rem;
     &__top-items {
       display: flex;
       justify-content: space-between;
@@ -278,8 +287,27 @@ html, body {
     }
     &__person {
       margin: 0;
+      width: 14rem;
     }
-
+    &__sub-header {
+      h4 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+    &__details {
+      p {
+        font-size: 0.875rem;
+      }
+    }
+    &__email {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+    &__copyright {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
   }
   
 }
