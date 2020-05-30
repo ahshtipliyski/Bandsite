@@ -88,7 +88,7 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   color: #ffffff;
-  font-family: Avenir-Bold;
+  font-family: 'Avenir-Bold';
   font-size: 1.5rem;
   line-height: 2rem;
   width: 70%;
@@ -107,7 +107,7 @@ html, body {
 }
 
 .about__header {
-  font-family: Avenir-Bold;
+  font-family: 'Avenir-Bold';
   margin: 2rem 0 1.5rem 0;
 }
 
@@ -119,7 +119,7 @@ html, body {
 
 .about__sub-header {
   font-size: 1rem;
-  font-family: Avenir-Demi;
+  font-family: 'Avenir-Demi';
   line-height: 1.375rem;
   margin-bottom: 0.75rem;
 }
@@ -141,13 +141,11 @@ html, body {
 }
 
 .about__paragraph-one {
-  font-family: Avenir-Regular;
   font-size: 0.75rem;
   line-height: 1.125rem;
 }
 
 .about__paragraph-two {
-  font-family: Avenir-Regular;
   font-size: 0.75rem;
   line-height: 1.125rem;
 }
@@ -164,7 +162,7 @@ html, body {
 
 .gallery__header {
   margin: 2rem 0 1rem 0;
-  font-family: Avenir-Bold;
+  font-family: 'Avenir-Bold';
 }
 
 .gallery__image {
@@ -231,6 +229,11 @@ html, body {
   font-size: 0.75rem;
 }
 
+.contact__email a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
 .contact__copyright {
   font-family: 'Avenir-Regular';
   margin: 0;
@@ -238,7 +241,7 @@ html, body {
   width: 70%;
 }
 
-@media (min-width: 321px) {
+@media (min-width: 400px) {
   .hero {
     height: 16.25rem;
   }
@@ -424,6 +427,14 @@ html, body {
     margin-left: 2.8rem;
     width: 5rem;
   }
+  .nav-bar__anchor:hover {
+    font-size: 1rem;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    font-family: 'Avenir-Bold';
+    color: #FFFFFF;
+    border-bottom: 0.25rem solid white;
+  }
   .hero {
     padding: 0 9rem;
     height: 33.5rem;
@@ -464,6 +475,15 @@ html, body {
   .gallery__image {
     width: 30.703%;
     margin: 1.283%;
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+  }
+  .gallery__image:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   .contact {
     padding: 0.775rem 9rem 2.4rem 9rem;
@@ -478,8 +498,27 @@ html, body {
     padding-left: 3rem;
   }
   .contact__people {
-    width: 80%;
+    width: 82%;
     margin: 0.25rem 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    height: 41.875rem;
+  }
+  .hero__header {
+    width: 50%;
+  }
+  .about__image {
+    height: 35rem;
+    width: 59.801rem;
+  }
+  .contact__icons {
+    padding-left: 5rem;
+  }
+  .contact__people {
+    width: 70%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

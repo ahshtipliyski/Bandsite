@@ -51,7 +51,7 @@ html, body {
     display: flex;
     align-items: center;
     color: #ffffff;
-    font-family: Avenir-Bold;
+    font-family: 'Avenir-Bold';
     font-size: 1.5rem;
     line-height: 2rem;
     width: 70%;
@@ -64,7 +64,7 @@ html, body {
   margin-bottom: 1.75rem;
   flex-direction: column;
   &__header {
-    font-family: Avenir-Bold;
+    font-family: 'Avenir-Bold';
     margin: 2rem 0 1.5rem 0;
   }
   &__image {
@@ -73,7 +73,7 @@ html, body {
   }
   &__sub-header {
     font-size: 1rem;
-    font-family: Avenir-Demi;
+    font-family: 'Avenir-Demi';
     line-height: 1.375rem;
     margin-bottom: 0.75rem;
   }
@@ -87,17 +87,12 @@ html, body {
     flex-direction: column;
   }
   &__paragraph-one {
-    font-family: Avenir-Regular;
-    font-size: 0.75rem;
-    line-height: 1.125rem;
+    @include align-paragraph;
   }
   &__paragraph-two {
-    font-family: Avenir-Regular;
-    font-size: 0.75rem;
-    line-height: 1.125rem;
+    @include align-paragraph;
   }
 }
-
 
 .gallery {
   background-color: #FAFAFA;
@@ -106,7 +101,7 @@ html, body {
   flex-wrap: wrap;
   &__header{
     margin: 2rem 0 1rem 0;
-    font-family: Avenir-Bold;
+    font-family: 'Avenir-Bold';
   }
   &__image {
     width: 100%;
@@ -161,6 +156,10 @@ html, body {
     font-family: 'Avenir-Regular';
     margin: 0;
     font-size: 0.75rem;
+    a {
+      text-decoration: none;
+      color: #FFFFFF;
+    }
   }
   &__copyright {
     font-family: 'Avenir-Regular';
@@ -231,19 +230,11 @@ html, body {
     }
     &__paragraph-one {
       margin-right: 0.75rem;
-      font-size: 0.875rem;
-      line-height: 1.375rem;
-      & p {
-        margin: 0;
-      }
+      @include align-tablet-paragraph;
     }
     &__paragraph-two {
       margin-left: 0.75rem;
-      font-size: 0.875rem;
-      line-height: 1.375rem;
-      & p {
-        margin: 0;
-      }
+      @include align-tablet-paragraph;
     }
   }
   .gallery {
@@ -313,7 +304,7 @@ html, body {
   
 }
 
-@include bigger-tablet {
+@include larger-tablet {
   .about__image {
     height: 100%;
   }
@@ -327,6 +318,13 @@ html, body {
     &__anchor {
       margin-left: 2.8rem;
       width: 5rem;
+      &:hover {
+        font-size: 1rem;
+        transition: 0.3s;
+        font-family: 'Avenir-Bold';
+        color: #FFFFFF;
+        border-bottom: 0.25rem solid white;
+      }
     }
   }
   .hero {
@@ -368,6 +366,12 @@ html, body {
     &__image {
       width: 30.703%;
       margin: 1.283%;
+      filter: grayscale(1);
+      &:hover {
+        filter: grayscale(0);
+        cursor: pointer;
+        transition: 0.3s;
+      }
     }
   }
   .contact {
@@ -380,12 +384,31 @@ html, body {
       padding-left: 3rem;
     }
     &__people {
-      width: 80%;
+      width: 82%;
       margin: 0.25rem 0;
     }
   }
 }
 
-
+@include larger-desktop {
+  .hero {
+    height: 41.875rem;
+    &__header {
+      width: 50%;
+    }
+  }
+  .about__image {
+    height: 35rem;
+    width: 59.801rem;
+  }
+  .contact {
+    &__icons {
+      padding-left: 5rem;
+    }
+    &__people {
+      width: 70%;
+    }
+  }
+}
 
 

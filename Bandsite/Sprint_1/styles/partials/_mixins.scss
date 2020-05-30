@@ -12,8 +12,8 @@
   }
 }
 
-@mixin bigger-tablet {
-  @media (min-width: $bigger-tablet-breakpoint) {
+@mixin larger-tablet {
+  @media (min-width: $larger-tablet-breakpoint) {
     @content;
   }
 }
@@ -21,5 +21,24 @@
 @mixin desktop {
   @media (min-width: $desktop-breakpoint) {
     @content;
+  }
+}
+
+@mixin larger-desktop {
+  @media (min-width: $larger-desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin align-paragraph {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+@mixin align-tablet-paragraph {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  & p {
+    margin: 0;
   }
 }
