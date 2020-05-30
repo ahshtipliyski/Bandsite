@@ -6,6 +6,7 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Avenir-Regular';
+  color: #323232;
 }
 
 .nav-bar {
@@ -27,13 +28,13 @@ html, body {
     width: 50%;
     justify-content: space-around;
     text-decoration: none;
-    color: #fafafa;
-    font-size: 0.9rem;
+    color: #afafaf;
+    font-size: 0.875rem;
     padding-bottom: 8px;
     border-bottom: 0.25rem solid transparent;
     &--active {
       border-bottom: 0.25rem solid white;
-      font-family: 'Avenir-Demi';
+      color: #FFFFFF;
     }
   }
 }
@@ -68,6 +69,7 @@ html, body {
   }
   &__image {
     width: 100%;
+    object-fit: cover;
   }
   &__sub-header {
     font-size: 1rem;
@@ -102,7 +104,6 @@ html, body {
   padding: 0 1rem 2rem 1rem;
   display: flex;
   flex-wrap: wrap;
-  // margin-bottom: 2rem;
   &__header{
     margin: 2rem 0 1rem 0;
     font-family: Avenir-Bold;
@@ -118,7 +119,7 @@ html, body {
   color: #FFFFFF;
   padding: 2rem 1rem;
   &__header {
-    font-family: Avenir-Bold;
+    font-family: 'Avenir-Bold';
     font-size: 1.5rem;
     margin: 0.625rem 0 1.5rem 0;
     h2 {
@@ -139,7 +140,7 @@ html, body {
   }
   &__sub-header {
     h4 {
-    font-family: Avenir-Demi;
+    font-family: 'Avenir-Demi';
     margin: 0;
     font-size: 0.875rem;
     line-height: 1.125rem;
@@ -150,19 +151,19 @@ html, body {
   }
   &__details {
     p {
-      font-family: Avenir-Regular;
+      font-family: 'Avenir-Regular';
       margin: 0;
       font-size: 0.75rem;
       line-height: 1.25rem;
     }
   }
   &__email {
-    font-family: Avenir-Regular;
+    font-family: 'Avenir-Regular';
     margin: 0;
     font-size: 0.75rem;
   }
   &__copyright {
-    font-family: Avenir-Regular;
+    font-family: 'Avenir-Regular';
     margin: 0;
     font-size: 0.75rem;
     width: 70%;
@@ -312,7 +313,79 @@ html, body {
   
 }
 
+@include bigger-tablet {
+  .about__image {
+    height: 100%;
+  }
+}
 
-// fit footer sizes on both mobile and tablet && fix text color
+// mockup is for 1440px, mine is 1200px, which is 20% less, so I scale down every element by 20%
 
-// change float left to flex-grow
+@include desktop {
+  .nav-bar {
+    padding: 0 9rem;
+    &__anchor {
+      margin-left: 2.8rem;
+      width: 5rem;
+    }
+  }
+  .hero {
+    padding: 0 9rem;
+    height: 33.5rem;
+  }
+  .about {
+    padding: 0 9rem;
+    margin-bottom: 2.4rem;
+    &__header {
+      margin: 2.4rem 0 ;
+    }
+    &__image {
+      width: 44.8rem;
+      height: 26.875rem;
+      margin: 0 auto;
+    }
+    &__sub-header {
+      margin: 2.4rem 0 1.6rem 0;
+    }
+    &__paragraph-from {
+      margin: 2rem 0 2.8rem 0;
+    }
+    &__container {
+      padding: 0 6.1rem;
+    }
+    &__paragraph-one {
+      margin-right: 1.25rem;
+    }
+    &__paragraph-two {
+      margin-left: 1.25rem;
+    }
+  }
+  .gallery {
+    padding: 0 8.25rem 1.25rem 8.25rem;
+    &__header {
+      margin: 2.4rem 0 2.45rem 0;
+    }
+    &__image {
+      width: 30.703%;
+      margin: 1.283%;
+    }
+  }
+  .contact {
+    padding: 0.775rem 9rem 2.4rem 9rem;
+    &__top-items {
+      justify-content: space-between;
+    }
+    &__icons {
+      margin-right: auto;
+      padding-left: 3rem;
+    }
+    &__people {
+      width: 80%;
+      margin: 0.25rem 0;
+    }
+  }
+}
+
+
+
+

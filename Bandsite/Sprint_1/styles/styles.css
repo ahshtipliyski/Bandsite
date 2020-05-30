@@ -6,6 +6,7 @@
 @font-face {
   font-family: 'Avenir-Demi';
   src: url("/assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 700;
 }
 
 @font-face {
@@ -19,6 +20,7 @@ html, body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Avenir-Regular';
+  color: #323232;
 }
 
 .nav-bar {
@@ -55,15 +57,15 @@ html, body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-decoration: none;
-  color: #fafafa;
-  font-size: 0.9rem;
+  color: #afafaf;
+  font-size: 0.875rem;
   padding-bottom: 8px;
   border-bottom: 0.25rem solid transparent;
 }
 
 .nav-bar__anchor--active {
   border-bottom: 0.25rem solid white;
-  font-family: 'Avenir-Demi';
+  color: #FFFFFF;
 }
 
 .hero {
@@ -111,6 +113,8 @@ html, body {
 
 .about__image {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about__sub-header {
@@ -175,7 +179,7 @@ html, body {
 }
 
 .contact__header {
-  font-family: Avenir-Bold;
+  font-family: 'Avenir-Bold';
   font-size: 1.5rem;
   margin: 0.625rem 0 1.5rem 0;
 }
@@ -204,7 +208,7 @@ html, body {
 }
 
 .contact__sub-header h4 {
-  font-family: Avenir-Demi;
+  font-family: 'Avenir-Demi';
   margin: 0;
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -215,20 +219,20 @@ html, body {
 }
 
 .contact__details p {
-  font-family: Avenir-Regular;
+  font-family: 'Avenir-Regular';
   margin: 0;
   font-size: 0.75rem;
   line-height: 1.25rem;
 }
 
 .contact__email {
-  font-family: Avenir-Regular;
+  font-family: 'Avenir-Regular';
   margin: 0;
   font-size: 0.75rem;
 }
 
 .contact__copyright {
-  font-family: Avenir-Regular;
+  font-family: 'Avenir-Regular';
   margin: 0;
   font-size: 0.75rem;
   width: 70%;
@@ -403,6 +407,79 @@ html, body {
   .contact__copyright {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .about__image {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-bar {
+    padding: 0 9rem;
+  }
+  .nav-bar__anchor {
+    margin-left: 2.8rem;
+    width: 5rem;
+  }
+  .hero {
+    padding: 0 9rem;
+    height: 33.5rem;
+  }
+  .about {
+    padding: 0 9rem;
+    margin-bottom: 2.4rem;
+  }
+  .about__header {
+    margin: 2.4rem 0;
+  }
+  .about__image {
+    width: 44.8rem;
+    height: 26.875rem;
+    margin: 0 auto;
+  }
+  .about__sub-header {
+    margin: 2.4rem 0 1.6rem 0;
+  }
+  .about__paragraph-from {
+    margin: 2rem 0 2.8rem 0;
+  }
+  .about__container {
+    padding: 0 6.1rem;
+  }
+  .about__paragraph-one {
+    margin-right: 1.25rem;
+  }
+  .about__paragraph-two {
+    margin-left: 1.25rem;
+  }
+  .gallery {
+    padding: 0 8.25rem 1.25rem 8.25rem;
+  }
+  .gallery__header {
+    margin: 2.4rem 0 2.45rem 0;
+  }
+  .gallery__image {
+    width: 30.703%;
+    margin: 1.283%;
+  }
+  .contact {
+    padding: 0.775rem 9rem 2.4rem 9rem;
+  }
+  .contact__top-items {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact__icons {
+    margin-right: auto;
+    padding-left: 3rem;
+  }
+  .contact__people {
+    width: 80%;
+    margin: 0.25rem 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */
