@@ -6,13 +6,13 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Avenir-Regular';
-  color: #323232;
+  color: $primary-color;
 }
 
 .nav-bar {
   height: 5rem;
-  background-color: #323232;
-  color: #FFFFFF;
+  background-color: $primary-color;
+  color: $secondary-color;
   display: flex;
   flex-wrap: wrap;
   &__logo {
@@ -28,13 +28,13 @@ html, body {
     width: 50%;
     justify-content: space-around;
     text-decoration: none;
-    color: #afafaf;
+    color: #AFAFAF;
     font-size: 0.875rem;
     padding-bottom: 8px;
     border-bottom: 0.25rem solid transparent;
     &--active {
       border-bottom: 0.25rem solid white;
-      color: #FFFFFF;
+      color: $secondary-color;
     }
   }
 }
@@ -51,7 +51,7 @@ html, body {
   &__header {
     display: flex;
     align-items: center;
-    color: #ffffff;
+    color: #FAFAFA;
     font-family: 'Avenir-Bold';
     font-size: 1.5rem;
     line-height: 2rem;
@@ -61,7 +61,7 @@ html, body {
   &__overlay {
     width: 100%;
     height: 100%;
-    background: #323232;
+    background: $primary-color;
     opacity: 0.5;
     position: absolute;
     right: 0;
@@ -120,7 +120,7 @@ html, body {
 }
 
 .contact {
-  background-color: #323232;
+  background-color: $primary-color;
   color: #FFFFFF;
   padding: 2rem 1rem;
   &__header {

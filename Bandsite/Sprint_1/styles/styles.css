@@ -26,7 +26,7 @@ html, body {
 .nav-bar {
   height: 5rem;
   background-color: #323232;
-  color: #FFFFFF;
+  color: #FAFAFA;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,7 +57,7 @@ html, body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-decoration: none;
-  color: #afafaf;
+  color: #AFAFAF;
   font-size: 0.875rem;
   padding-bottom: 8px;
   border-bottom: 0.25rem solid transparent;
@@ -65,7 +65,7 @@ html, body {
 
 .nav-bar__anchor--active {
   border-bottom: 0.25rem solid white;
-  color: #FFFFFF;
+  color: #FAFAFA;
 }
 
 .hero {
@@ -88,7 +88,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #ffffff;
+  color: #FAFAFA;
   font-family: 'Avenir-Bold';
   font-size: 1.5rem;
   line-height: 2rem;
