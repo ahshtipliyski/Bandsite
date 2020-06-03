@@ -48,6 +48,19 @@ html, body {
   padding: 0 1rem;
   height: 11.438rem;
   position: relative;
+  &__shows {
+    background-image: url("/assets/Images/hero2.jpg");
+    flex-wrap: wrap;
+    height: 29.5rem;
+    align-content: center;
+  }
+  &__song {
+    z-index: 1;
+  }
+  &__toptext {
+    z-index: 1;
+    color: #FFFFFF;
+  }
   &__header {
     display: flex;
     align-items: center;

@@ -81,6 +81,24 @@ html, body {
   position: relative;
 }
 
+.hero__shows {
+  background-image: url("/assets/Images/hero2.jpg");
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 29.5rem;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.hero__song {
+  z-index: 1;
+}
+
+.hero__toptext {
+  z-index: 1;
+  color: #FFFFFF;
+}
+
 .hero__header {
   display: -webkit-box;
   display: -ms-flexbox;
