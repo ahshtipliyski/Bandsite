@@ -42,3 +42,10 @@
     margin: 0;
   }
 }
+
+@mixin shows-headers {
+  color: #AFAFAF;
+  font-size: 0.875rem;
+  font-family: 'Avenir-Demi';
+  margin: 1rem 0;
+}

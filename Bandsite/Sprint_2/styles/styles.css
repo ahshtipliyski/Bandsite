@@ -86,8 +86,8 @@ html, body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   height: 29.5rem;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
 }
 
 .hero__song {
@@ -197,6 +197,115 @@ html, body {
 .gallery__image {
   width: 100%;
   margin: 0.5rem 0;
+}
+
+.comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px;
+}
+
+.comments__image {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.comments__image-url {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-image: url("/assets/images/Mohan-muruge.jpg");
+  background-size: cover;
+}
+
+.comments__container {
+  width: 288px;
+  height: 250px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.table {
+  padding: 1rem;
+}
+
+.table__container {
+  padding: 1rem 0;
+  border-bottom: 1px solid grey;
+}
+
+.table__header {
+  font-size: 1.5rem;
+  font-family: 'Avenir-Bold';
+  color: #323232;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.table__full {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.table__header-date {
+  color: #AFAFAF;
+  font-size: 0.875rem;
+  font-family: 'Avenir-Demi';
+  margin: 1rem 0;
+}
+
+.table__header-venue {
+  color: #AFAFAF;
+  font-size: 0.875rem;
+  font-family: 'Avenir-Demi';
+  margin: 1rem 0;
+}
+
+.table__header-location {
+  color: #AFAFAF;
+  font-size: 0.875rem;
+  font-family: 'Avenir-Demi';
+  margin: 1rem 0;
+}
+
+.table__date {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-family: 'Avenir-Demi';
+}
+
+.table__button {
+  background-color: #323232;
+  height: 3rem;
+  font-family: 'Avenir-Demi';
+  font-size: 1rem;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0.3rem;
+}
+
+.table__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.table__container td {
+  padding: 5px 0;
 }
 
 .contact {
