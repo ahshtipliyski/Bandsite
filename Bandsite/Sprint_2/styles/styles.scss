@@ -52,7 +52,7 @@ html, body {
     background-image: url("/assets/Images/hero2.jpg");
     flex-wrap: wrap;
     height: 29.5rem;
-    align-content: space-between;
+    align-content: center;
   }
   &__song {
     z-index: 1;
@@ -60,6 +60,8 @@ html, body {
   &__toptext {
     z-index: 1;
     color: #FFFFFF;
+    margin: 1.5rem 0 0 0;
+    font-size: 0.875rem;
   }
   &__header {
     display: flex;
@@ -70,6 +72,12 @@ html, body {
     line-height: 2rem;
     width: 70%;
     z-index: 1;
+  }
+  &__header-show {
+    width: 100%;
+    font-size: 2.125rem;
+    line-height: 3rem;
+    margin: 0.75rem 0 3rem 0;
   }
   &__overlay {
     width: 100%;
@@ -132,45 +140,125 @@ html, body {
   }
 }
 //================ below crappy scss - fix it !!!
-.comments {
+.comment {
   display: flex;
   flex-direction: column;
   padding: 16px;
+  &__title {
+    font-family: 'Avenir-Bold';
+    font-size: 1.5rem;
+    margin: 1rem 0 2.5rem 0;
+  }
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    width: 14rem; 
+  }
+  &__name-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: relative;
+  }
+  &__image {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+    object-fit: cover;
+    object-position: left;
+  }
+  &__input-label {
+    @include shows-headers;
+    &:first-of-type {
+      margin: 0 0 0.5rem 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__text-container-name {
+    height: 2.8rem;
+    @include text-container;
+  }
+  &__text-container-comment {
+    height: 6rem;
+    padding-top: 0.75rem;
+    resize: none;
+    @include text-container;
+  }
+  &__button {
+    background-color: $primary-color;
+    color: #FFFFFF;
+    margin: 1rem 0 2rem 0;
+    height: 3rem;
+    font-family: 'Avenir-Demi';
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0.3rem;
+    outline: none;
+  }
+  &__header-image {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #E1E1E1;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-end;
+    border-top: 0.063rem solid #E1E1E1;
+    &:last-of-type {
+      border-bottom: 0.063rem solid #E1E1E1;
+    }
+  }
+  &__header {
+    display: flex;
+    flex-direction: row;
+    width: 14rem;
+    justify-content: space-between;
+    margin: 0.6rem 0 0 0;
+  }
+  &__header-name {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.9rem;
+    font-family: 'Avenir-Demi';
+  }
+  &__header-date {
+    font-size: 0.9rem;
+    color: #AFAFAF;
+  }
+  &__text-comment {
+    display: flex;
+    width: 14rem;
+    font-size: 0.85rem;
+    line-height: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
-.comments__image {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-}
-.comments__image-url {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  background-image: url('/assets/images/Mohan-muruge.jpg');
-  background-size: cover;
-}
-.comments__container {
-  width: 288px;
-  height: 250px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  
-}
-
-//============== above crappy scss - fit it !!!
+//============== above crappy scss - fix it !!!
 
 .table {
-  padding: 1rem;
+  padding: 1rem 1rem 2.5rem 1rem;
   &__container {
     padding: 1rem 0;
-    border-bottom: 1px solid grey;
+    border-bottom: 0.063rem solid #E1E1E1;
   }
   &__header {
     font-size: 1.5rem;
     font-family: 'Avenir-Bold';
     color: $primary-color;
-    margin: 1rem 0 1.5rem 0;
+    margin: 0.75rem 0 0.25rem 0;
   }
   &__full {
     display: flex;
@@ -186,28 +274,26 @@ html, body {
     @include shows-headers;
   }
   &__date {
-    margin: 0 0 0.5rem 0;
-    font-size: 1rem;
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
     font-family: 'Avenir-Demi';
+  }
+  &__venue, &__location {
+    font-size: 0.875rem;
   }
   &__button {
     background-color: $primary-color;
     height: 3rem;
+    width: 100%;
     font-family: 'Avenir-Demi';
     font-size: 1rem;
     color: #FFFFFF;
     border: none;
     border-radius: 0.3rem;
+    outline: none;
   }
 }
 
-.table__container {
-  display: flex;
-  flex-direction: column;
-  & td {
-    padding: 5px 0;
-  }
-}
 
 
 
