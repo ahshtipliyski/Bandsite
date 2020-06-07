@@ -25,7 +25,7 @@ const upcomingShows = [
     location: "San Francisco, CA"
   },
   {
-    date: "Web Aug 11 2019",
+    date: "Wed Aug 11 2019",
     venue: "Pres Club",
     location: "San Francisco, CA"
   },

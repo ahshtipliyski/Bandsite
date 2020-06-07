@@ -904,7 +904,6 @@ html, body {
     width: 5rem;
   }
   .nav-bar__anchor:hover {
-    font-size: 1rem;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     font-family: 'Avenir-Bold';
@@ -914,6 +913,33 @@ html, body {
   .hero {
     padding: 0 9rem;
     height: 33.5rem;
+  }
+  .hero__shows {
+    height: 33.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .hero__toptext {
+    width: 100%;
+    margin: 8rem 0 0.75rem 0;
+  }
+  .hero__header-show {
+    width: 50%;
+    font-size: 3rem;
+    line-height: 4.25rem;
+  }
+  .hero__song {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    padding: 0 0 4.063rem 1.5rem;
   }
   .about {
     padding: 0 9rem;
@@ -929,6 +955,7 @@ html, body {
   }
   .about__sub-header {
     margin: 2.4rem 0 1.6rem 0;
+    font-size: 1.3rem;
   }
   .about__paragraph-from {
     margin: 2rem 0 2.8rem 0;
@@ -960,6 +987,43 @@ html, body {
     cursor: pointer;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+  }
+  .comment {
+    padding: 2.4rem 9rem;
+  }
+  .comment__text-container-name {
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+  }
+  .comment__text-container-comment {
+    padding: 1rem 0 0 1rem;
+  }
+  .comment__button {
+    margin: 1.5rem 0;
+  }
+  .comment__button:hover {
+    background-color: black;
+    cursor: pointer;
+  }
+  .table {
+    padding: 2.4rem 9rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .table__header {
+    width: 10rem;
+  }
+  .table__full {
+    width: 45rem;
+  }
+  .table__button:hover {
+    background-color: black;
+    cursor: pointer;
   }
   .contact {
     padding: 0.775rem 9rem 2.4rem 9rem;

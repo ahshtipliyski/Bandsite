@@ -625,7 +625,6 @@ html, body {
       margin-left: 2.8rem;
       width: 5rem;
       &:hover {
-        font-size: 1rem;
         transition: 0.3s;
         font-family: 'Avenir-Bold';
         color: #FFFFFF;
@@ -636,6 +635,26 @@ html, body {
   .hero {
     padding: 0 9rem;
     height: 33.5rem;
+    &__shows {
+      height: 33.5rem;
+      display: flex;
+      flex-direction: row;
+    }
+    &__toptext {
+      width: 100%;
+      margin: 8rem 0 0.75rem 0;
+    }
+    &__header-show {
+      width: 50%;
+      font-size: 3rem;
+      line-height: 4.25rem;
+    }
+    &__song {
+      display: flex;
+      align-self: flex-end;
+      padding: 0 0 4.063rem 1.5rem;
+      
+    }
   }
   .about {
     padding: 0 9rem;
@@ -650,6 +669,7 @@ html, body {
     }
     &__sub-header {
       margin: 2.4rem 0 1.6rem 0;
+      font-size: 1.3rem;
     }
     &__paragraph-from {
       margin: 2rem 0 2.8rem 0;
@@ -678,6 +698,49 @@ html, body {
         cursor: pointer;
         transition: 0.3s;
       }
+    }
+  }
+  .comment {
+    padding: 2.4rem 9rem;
+    &__text-container-name {
+      height: 3rem;
+      margin-bottom: 1.5rem;
+      padding-left: 1rem;
+    }
+    &__text-container-comment {
+      padding: 1rem 0 0 1rem;
+    }
+    &__button {
+      margin: 1.5rem 0;
+      &:hover {
+      background-color: black;
+      cursor: pointer;
+      // &:active {                         // supposed to be this way, but I don't like how it comes up
+      //   border-radius: 2px;
+      //   box-shadow: 0 40px 32px -4px #e1e1e1;
+      //   }
+      }
+    }
+  }
+
+  .table {
+    padding: 2.4rem 9rem;
+    display: flex;
+    justify-content: space-between;
+    &__header {
+      width: 10rem;
+    }
+    &__full {
+      width: 45rem;
+    }
+    &__button { 
+      &:hover {
+      background-color: black;
+      cursor: pointer;
+      } //&:active {                         // supposed to be this way, but I don't like how it comes up
+      // border-radius: 2px;
+      // box-shadow: 0 40px 32px -4px #e1e1e1;
+      // }
     }
   }
   .contact {
