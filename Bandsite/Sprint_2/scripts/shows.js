@@ -28,29 +28,29 @@ const upcomingShows = [
     date: "Wed Aug 11 2019",
     venue: "Pres Club",
     location: "San Francisco, CA"
-  },
+  }
 ];
 
 let parentTable = document.querySelector(".table__full");
 
-let tableContainer = document.createElement('div');
-tableContainer.classList.add('table__container-one');
-parentTable.appendChild(tableContainer);
+let tableContainerOne = document.createElement('div');
+tableContainerOne.classList.add('table__container-one');
+parentTable.appendChild(tableContainerOne);
 
-let dateHeader = document.createElement('p');
-dateHeader.classList.add('table__header-date');
-tableContainer.appendChild(dateHeader);
-document.querySelectorAll(".table__header-date").innerHTML = ("DATE");
+let dateHeaderOne = document.createElement('p');
+dateHeaderOne.classList.add('table__header-date-one');
+tableContainerOne.appendChild(dateHeaderOne);
+document.querySelector(".table__header-date-one").innerText = ("DATES");
 
-let venueHeader = document.createElement('p');
-venueHeader.classList.add('table__header-venue');
-tableContainer.appendChild(venueHeader);
-document.querySelectorAll(".table__header-venue").innerHTML = ("VENUE");
+let venueHeaderOne = document.createElement('p');
+venueHeaderOne.classList.add('table__header-venue-one');
+tableContainerOne.appendChild(venueHeaderOne);
+document.querySelector(".table__header-venue-one").innerHTML = ("VENUE");
 
-let locationHeader = document.createElement('p');
-locationHeader.classList.add('table__header-location');
-tableContainer.appendChild(locationHeader);
-document.querySelectorAll(".table__header-location").innerHTML = ("LOCATION");
+let locationHeaderOne = document.createElement('p');
+locationHeaderOne.classList.add('table__header-location-one');
+tableContainerOne.appendChild(locationHeaderOne);
+document.querySelector(".table__header-location-one").innerHTML = ("LOCATION");
 
 for(let i = 0; i < upcomingShows.length; i++) {
   let tableContainer = document.createElement('div');

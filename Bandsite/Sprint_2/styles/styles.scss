@@ -546,13 +546,23 @@ html, body {
     &__container-one > p {
       display: flex;
     }
-    &__header-date {
+    &__header-date-one {
+      @include shows-headers;
       width: 14rem;
       font-size: 0.813rem;
+      margin: auto 0;
     }
-    &__header-venue {
+    &__header-venue-one {
+      @include shows-headers;
       width: 9.25rem;
       font-size: 0.813rem;
+      margin: auto 0;
+    }
+    &__header-location-one {
+      @include shows-headers;
+      width: 11.75rem;
+      font-size: 0.813rem;
+      margin: auto 0;
     }
     &__button {
       width: 10rem;
