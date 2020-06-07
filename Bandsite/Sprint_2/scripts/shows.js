@@ -33,6 +33,25 @@ const upcomingShows = [
 
 let parentTable = document.querySelector(".table__full");
 
+let tableContainer = document.createElement('div');
+tableContainer.classList.add('table__container-one');
+parentTable.appendChild(tableContainer);
+
+let dateHeader = document.createElement('p');
+dateHeader.classList.add('table__header-date');
+tableContainer.appendChild(dateHeader);
+document.querySelectorAll(".table__header-date").innerHTML = ("DATE");
+
+let venueHeader = document.createElement('p');
+venueHeader.classList.add('table__header-venue');
+tableContainer.appendChild(venueHeader);
+document.querySelectorAll(".table__header-venue").innerHTML = ("VENUE");
+
+let locationHeader = document.createElement('p');
+locationHeader.classList.add('table__header-location');
+tableContainer.appendChild(locationHeader);
+document.querySelectorAll(".table__header-location").innerHTML = ("LOCATION");
+
 for(let i = 0; i < upcomingShows.length; i++) {
   let tableContainer = document.createElement('div');
   tableContainer.classList.add('table__container');
