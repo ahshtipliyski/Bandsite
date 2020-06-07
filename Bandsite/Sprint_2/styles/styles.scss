@@ -139,7 +139,7 @@ html, body {
     margin: 0.5rem 0;
   }
 }
-//================ below crappy scss - fix it !!!
+
 .comment {
   display: flex;
   flex-direction: column;
@@ -232,6 +232,7 @@ html, body {
     align-items: flex-end;
     font-size: 0.9rem;
     font-family: 'Avenir-Demi';
+    margin: auto 0;
   }
   &__header-date {
     font-size: 0.9rem;
@@ -245,8 +246,6 @@ html, body {
     margin-bottom: 1.5rem;
   }
 }
-
-//============== above crappy scss - fix it !!!
 
 .table {
   padding: 1rem 1rem 2.5rem 1rem;
@@ -293,14 +292,6 @@ html, body {
     outline: none;
   }
 }
-
-
-
-
-
-
-//=============== above crappy scss - fit it !!!!
-
 
 .contact {
   background-color: $primary-color;
@@ -380,7 +371,7 @@ html, body {
       width: auto;
     }
     &__anchor {
-      width: auto;
+      width: 5rem;
       height: 5rem;
       margin-left: 3.75rem;
       box-sizing: border-box;
@@ -390,11 +381,29 @@ html, body {
   .hero {
     height: 25rem;
     padding: 0 1.5rem;
+    &__shows {
+      height: 41.875rem;
+      align-content: flex-start;
+    }
+    &__toptext {
+      font-size: 1.5rem;
+      font-family: 'Avenir-Bold';
+      margin: 6rem 0 1rem 0;
+    }
     &__header {
       line-height: 5rem;
       font-size: 3.75rem;
     }
+    &__header-show {
+      width: 80%;
+      line-height: 5rem;
+    }
+    &__song {
+      width: 27rem;
+      height: 8rem;
+    }
   }
+
   .about {
     padding: 0 1.5rem;
     margin-bottom: 2.3rem;
@@ -447,6 +456,87 @@ html, body {
       margin: 1.613%;
     }
   }
+
+  .comment {
+    padding: 1.5rem;
+    &__title {
+      font-size: 2.25rem;
+    }
+    &__name-container {
+      width: 32.5rem;
+      margin: 0 auto;
+    }
+    &__input-container {
+      width: 28.125rem;
+    }
+    &__text-container {
+      width: 100%;
+    }
+    &__button {
+      width: 9.375rem;
+      align-self: flex-end;    
+    }
+    &__comments-array {
+      width: 32.5rem;
+      margin: 0 auto;
+    }
+    &__header {
+      width: 29rem;
+      justify-content: flex-start;
+    }
+    &__header-name {
+      font-size: 1rem;
+      font-family: 'Avenir-Demi';
+      margin-bottom: 0.5rem;
+    }
+    &__header-date {
+      padding-left: 0.75rem;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    &__text-comment {
+      width: 29rem;
+      font-size: 0.875rem;
+      margin-top: 0;
+      line-height: 1.25rem;
+    }
+  }
+
+  .table {
+    padding: 1.5rem;
+    &__header {
+      font-size: 2.25rem;
+    }
+    &__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+    }
+    &__date {
+      margin: auto 0;
+      width: 14rem;
+    }
+    &__venue {
+      width: 9.25rem;
+    }
+    &__location {
+      width: 11.75rem;
+    }
+    &__header-date {
+      display: none;
+    }
+    &__header-venue {
+      display: none;
+    }
+    &__header-location {
+      display: none;
+    }
+    &__button {
+      width: 10rem;
+    }
+  }
+
   .contact {
     display: flex;
     flex-direction: column;

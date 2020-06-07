@@ -425,6 +425,7 @@ html, body {
           align-items: flex-end;
   font-size: 0.9rem;
   font-family: 'Avenir-Demi';
+  margin: auto 0;
 }
 
 .comment__header-date {
@@ -605,7 +606,7 @@ html, body {
     width: auto;
   }
   .nav-bar__anchor {
-    width: auto;
+    width: 5rem;
     height: 5rem;
     margin-left: 3.75rem;
     -webkit-box-sizing: border-box;
@@ -616,9 +617,27 @@ html, body {
     height: 25rem;
     padding: 0 1.5rem;
   }
+  .hero__shows {
+    height: 41.875rem;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  .hero__toptext {
+    font-size: 1.5rem;
+    font-family: 'Avenir-Bold';
+    margin: 6rem 0 1rem 0;
+  }
   .hero__header {
     line-height: 5rem;
     font-size: 3.75rem;
+  }
+  .hero__header-show {
+    width: 80%;
+    line-height: 5rem;
+  }
+  .hero__song {
+    width: 27rem;
+    height: 8rem;
   }
   .about {
     padding: 0 1.5rem;
@@ -687,6 +706,94 @@ html, body {
     width: 30.108%;
     height: 28.064%;
     margin: 1.613%;
+  }
+  .comment {
+    padding: 1.5rem;
+  }
+  .comment__title {
+    font-size: 2.25rem;
+  }
+  .comment__name-container {
+    width: 32.5rem;
+    margin: 0 auto;
+  }
+  .comment__input-container {
+    width: 28.125rem;
+  }
+  .comment__text-container {
+    width: 100%;
+  }
+  .comment__button {
+    width: 9.375rem;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .comment__comments-array {
+    width: 32.5rem;
+    margin: 0 auto;
+  }
+  .comment__header {
+    width: 29rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .comment__header-name {
+    font-size: 1rem;
+    font-family: 'Avenir-Demi';
+    margin-bottom: 0.5rem;
+  }
+  .comment__header-date {
+    padding-left: 0.75rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .comment__text-comment {
+    width: 29rem;
+    font-size: 0.875rem;
+    margin-top: 0;
+    line-height: 1.25rem;
+  }
+  .table {
+    padding: 1.5rem;
+  }
+  .table__header {
+    font-size: 2.25rem;
+  }
+  .table__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+  }
+  .table__date {
+    margin: auto 0;
+    width: 14rem;
+  }
+  .table__venue {
+    width: 9.25rem;
+  }
+  .table__location {
+    width: 11.75rem;
+  }
+  .table__header-date {
+    display: none;
+  }
+  .table__header-venue {
+    display: none;
+  }
+  .table__header-location {
+    display: none;
+  }
+  .table__button {
+    width: 10rem;
   }
   .contact {
     display: -webkit-box;

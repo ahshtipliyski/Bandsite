@@ -73,47 +73,6 @@ for(let i = 0; i < upcomingShows.length; i++) {
   tableButton.classList.add("table__button");
   document.querySelectorAll(".table__button")[i].innerHTML = ("BUY TICKETS");
 
-
-  // let commentName = document.createElement("h4");
-  // commentContainer.appendChild(commentName);
-  // commentName.classList.add("comments__person");
-  // document.querySelectorAll(".comments__person")[i].innerHTML = commentsArray[i].name;
-
-
-  // let showContainer = document.createElement('div');
-  // showContainer.classList.add("table__container");
-
-  // let newTr = document.createElement('tr');
-  // let dateTh = document.createElement('th');
-  // let venueTd = document.createElement('td');
-  // let locationTd = document.createElement('td');
-  // let ticketTd = document.createElement('td');
-  // let ticketButton = document.createElement('button');
-
-  // newTr.classList.add();
-  // dateTh.classList.add('table__date');
-  // venueTd.classList.add('tabel__venue');
-  // locationTd.classList.add('table__location');
-  // ticketButton.classList.add('table__ticket-button');
-
-  // let commentContainer = document.createElement('div');
-  // commentContainer.classList.add("comments__container");
-  // parentForm.appendChild(commentContainer);
-  // let imageUrl = document.createElement('img');
-  // imageUrl.classList.add("comments__image-url");
-  // commentContainer.appendChild(imageUrl);
-  // let commentName = document.createElement("h4");
-  // commentContainer.appendChild(commentName);
-  // commentName.classList.add("comments__person");
-  // document.querySelectorAll(".comments__person")[i].innerHTML = commentsArray[i].name;
-  // let commentDate = document.createElement("p");
-  // commentContainer.appendChild(commentDate);
-  // commentDate.classList.add("comments__date");
-  // document.querySelectorAll(".comments__date")[i].innerHTML = commentsArray[i].date;
-  // let commentText = document.createElement("p");
-  // commentContainer.appendChild(commentText);
-  // commentText.classList.add("comments__text");
-  // document.querySelectorAll(".comments__text")[i].innerHTML = commentsArray[i].comment;
 };
 
 
