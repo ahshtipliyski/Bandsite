@@ -245,6 +245,19 @@ html, body {
     line-height: 1.25rem;
     margin-bottom: 1.5rem;
   }
+  &__button-container {
+    margin-bottom: 1.5rem;
+  }
+  &__remove-comment {
+    background-color: $primary-color;
+    color: #FFFFFF;
+    height: 2rem;
+    outline: none;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .table {
@@ -730,6 +743,12 @@ html, body {
       //   box-shadow: 0 40px 32px -4px #e1e1e1;
       //   }
       }
+    }
+    &__text-comment {
+      margin-bottom: 0.5rem;
+    }
+    &__remove-comment:hover {
+      background-color: black;
     }
   }
 

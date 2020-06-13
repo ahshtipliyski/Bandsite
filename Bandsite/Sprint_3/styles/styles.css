@@ -443,6 +443,21 @@ html, body {
   margin-bottom: 1.5rem;
 }
 
+.comment__button-container {
+  margin-bottom: 1.5rem;
+}
+
+.comment__remove-comment {
+  background-color: #323232;
+  color: #FFFFFF;
+  height: 2rem;
+  outline: none;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
 .table {
   padding: 1rem 1rem 2.5rem 1rem;
 }
@@ -1024,6 +1039,12 @@ html, body {
   .comment__button:hover {
     background-color: black;
     cursor: pointer;
+  }
+  .comment__text-comment {
+    margin-bottom: 0.5rem;
+  }
+  .comment__remove-comment:hover {
+    background-color: black;
   }
   .table {
     padding: 2.4rem 9rem;

@@ -1,27 +1,5 @@
 const apiKey = "7b95bc92-a319-4ff5-a56a-47ea95497abd";
 
-// let commentsArray = [
-//   {
-//   name: "Micheal Lyons",
-//   date: "12/18/2018",
-//   comment: "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed."
-//   },
-//   {
-//   name: "Gary Wong",
-//   date: "12/12/2018",
-//   comment: "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!"
-//   },
-//   {
-//   name: "Theodore Duncan",
-//   date: "11/15/2018",
-//   comment: "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
-// }];
-
-
-
-
-
-
 //creating default comments and pushing information from the array.
 function displayComments(array) {
 let biggerContainer = document.querySelector(".comment__comments-array");
@@ -30,8 +8,7 @@ biggerContainer.innerText = "";
   for (let i = 0; i < array.length; i++) {
 
     let actualDate = new Date(array[i]["timestamp"]);
-    let displayDate =
-    actualDate.getUTCMonth() + 1 + "/" + actualDate.getUTCDate() + "/" + actualDate.getUTCFullYear();
+    let displayDate = actualDate.getUTCMonth() + 1 + "/" + actualDate.getUTCDate() + "/" + actualDate.getUTCFullYear();
 
     let commentContainer = document.createElement("div");
     commentContainer.classList.add("comment__container");

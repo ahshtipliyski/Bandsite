@@ -1,95 +1,110 @@
-const upcomingShows = [
-  {
-    date: "Mon Dec 17 2018",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA"
-  },
-  {
-    date: "Tue Jul 18 2019",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA"
-  },
-  {
-    date: "Fri Jul 22 2019",
-    venue: "View Loungue",
-    location: "San Francisco, CA"
-  },
-  {
-    date: "Sat Aug 12 2019",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA"
-  },
-  {
-    date: "Fri Sep 05 2019",
-    venue: "Moscow Center",
-    location: "San Francisco, CA"
-  },
-  {
-    date: "Wed Aug 11 2019",
-    venue: "Pres Club",
-    location: "San Francisco, CA"
-  }
-];
+// const upcomingShows = [
+//   {
+//     date: "Mon Dec 17 2018",
+//     venue: "Ronald Lane",
+//     location: "San Francisco, CA"
+//   },
+//   {
+//     date: "Tue Jul 18 2019",
+//     venue: "Pier 3 East",
+//     location: "San Francisco, CA"
+//   },
+//   {
+//     date: "Fri Jul 22 2019",
+//     venue: "View Loungue",
+//     location: "San Francisco, CA"
+//   },
+//   {
+//     date: "Sat Aug 12 2019",
+//     venue: "Hyatt Agency",
+//     location: "San Francisco, CA"
+//   },
+//   {
+//     date: "Fri Sep 05 2019",
+//     venue: "Moscow Center",
+//     location: "San Francisco, CA"
+//   },
+//   {
+//     date: "Wed Aug 11 2019",
+//     venue: "Pres Club",
+//     location: "San Francisco, CA"
+//   }
+// ];
 
 let parentTable = document.querySelector(".table__full");
 
-let tableContainerOne = document.createElement('div');
-tableContainerOne.classList.add('table__container-one');
-parentTable.appendChild(tableContainerOne);
+let tableContainerTop = document.createElement('div');
+tableContainerTop.classList.add('table__container-one');
+parentTable.appendChild(tableContainerTop);
 
-let dateHeaderOne = document.createElement('p');
-dateHeaderOne.classList.add('table__header-date-one');
-tableContainerOne.appendChild(dateHeaderOne);
-document.querySelector(".table__header-date-one").innerText = ("DATES");
+let dateHeaderTop = document.createElement('p');
+dateHeaderTop.classList.add('table__header-date-one');
+dateHeaderTop.innerText = ("DATES");
+tableContainerTop.appendChild(dateHeaderTop);
 
-let venueHeaderOne = document.createElement('p');
-venueHeaderOne.classList.add('table__header-venue-one');
-tableContainerOne.appendChild(venueHeaderOne);
-document.querySelector(".table__header-venue-one").innerHTML = ("VENUE");
+let venueHeaderTop = document.createElement('p');
+venueHeaderTop.classList.add('table__header-venue-one');
+venueHeaderTop.innerText = ("VENUE");
+tableContainerTop.appendChild(venueHeaderTop);
 
-let locationHeaderOne = document.createElement('p');
-locationHeaderOne.classList.add('table__header-location-one');
-tableContainerOne.appendChild(locationHeaderOne);
-document.querySelector(".table__header-location-one").innerHTML = ("LOCATION");
+let locationHeaderTop = document.createElement('p');
+locationHeaderTop.classList.add('table__header-location-one');
+locationHeaderTop.innerText = ("LOCATION");
+tableContainerTop.appendChild(locationHeaderTop);
 
-for(let i = 0; i < upcomingShows.length; i++) {
+upcomingShows = () => {
+  axios
+    .get("https://project-1-api.herokuapp.com/showdates?api_key=<7b95bc92-a319-4ff5-a56a-47ea95497abd>")
+    .then(response => {
+      console.log(response.data)
+      response.data.forEach(post => {
+        showDates(post);
+      })
+    })
+    .catch(error => {
+      console.log(error);
+    })
+};
+upcomingShows();
+
+showDates = (post) => {
   let tableContainer = document.createElement('div');
   tableContainer.classList.add('table__container');
   parentTable.appendChild(tableContainer);
 
   let dateHeader = document.createElement('p');
   dateHeader.classList.add('table__header-date');
+  dateHeader.innerText = ("DATE");
   tableContainer.appendChild(dateHeader);
-  document.querySelectorAll(".table__header-date")[i].innerHTML = ("DATE");
 
   let tableDate = document.createElement('p');
-  tableContainer.appendChild(tableDate);
   tableDate.classList.add("table__date");
-  document.querySelectorAll(".table__date")[i].innerHTML = upcomingShows[i].date;
+  tableDate.innerText = `${post.date}`;
+  tableContainer.appendChild(tableDate);
 
   let venueHeader = document.createElement('p');
   venueHeader.classList.add('table__header-venue');
+  venueHeader.innerHTML = ("VENUE");
   tableContainer.appendChild(venueHeader);
-  document.querySelectorAll(".table__header-venue")[i].innerHTML = ("VENUE");
 
   let tableVenue = document.createElement('p');
-  tableContainer.appendChild(tableVenue);
   tableVenue.classList.add("table__venue");
-  document.querySelectorAll(".table__venue")[i].innerHTML = upcomingShows[i].venue;
+  tableVenue.innerText = `${post.place}`
+  tableContainer.appendChild(tableVenue);
 
   let locationHeader = document.createElement('p');
   locationHeader.classList.add('table__header-location');
+  locationHeader.innerHTML = ("LOCATION");
   tableContainer.appendChild(locationHeader);
-  document.querySelectorAll(".table__header-location")[i].innerHTML = ("LOCATION");
 
   let tableLocation = document.createElement('p');
-  tableContainer.appendChild(tableLocation);
   tableLocation.classList.add("table__location");
-  document.querySelectorAll(".table__location")[i].innerHTML = upcomingShows[i].location;
+  tableLocation.innerText = `${post.location}`;
+  tableContainer.appendChild(tableLocation);
 
   let tableButton = document.createElement('button');
-  tableContainer.appendChild(tableButton);
   tableButton.classList.add("table__button");
-  document.querySelectorAll(".table__button")[i].innerHTML = ("BUY TICKETS");
+  tableButton.innerHTML = ("BUY TICKETS");
+  tableContainer.appendChild(tableButton);
 
 };
