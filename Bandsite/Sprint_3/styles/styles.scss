@@ -157,8 +157,9 @@ html, body {
   &__name-container {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    width: 18rem;
     position: relative;
+    align-self: center;
   }
   &__image {
     height: 3rem;
@@ -211,11 +212,13 @@ html, body {
     top: 1.5rem;
   }
   &__container {
+    width: 18rem;
     display: flex;
     flex-direction: column;
     position: relative;
     align-items: flex-end;
     border-top: 0.063rem solid #E1E1E1;
+    margin: 0 auto;
     &:last-of-type {
       border-bottom: 0.063rem solid #E1E1E1;
     }
@@ -265,6 +268,8 @@ html, body {
   &__container {
     padding: 1rem 0;
     border-bottom: 0.063rem solid #E1E1E1;
+    width: 18rem;
+    margin: 0 auto;
   }
   &__container-one {
     display: none;
@@ -299,7 +304,7 @@ html, body {
   &__button {
     background-color: $primary-color;
     height: 3rem;
-    width: 100%;
+    width: 18rem;
     font-family: 'Avenir-Demi';
     font-size: 1rem;
     color: #FFFFFF;
@@ -372,6 +377,9 @@ html, body {
 @include large-phone {
   .hero {
     height: 16.25rem;
+    &__shows {
+      height: 28rem;
+    }
   }
 }
 
@@ -478,6 +486,9 @@ html, body {
     &__title {
       font-size: 2.25rem;
     }
+    &__container {
+      width: 32.5rem;
+    }
     &__name-container {
       width: 32.5rem;
       margin: 0 auto;
@@ -529,19 +540,21 @@ html, body {
       flex-direction: row;
       justify-content: space-between;
       position: relative;
+      width: 45rem;
     }
     &__date {
       margin: auto 0;
-      width: 14rem;
-      font-size: 1rem;
+      width: 9rem;
     }
     &__venue {
       width: 9.25rem;
       font-size: 0.9rem;
+      align-self: center;
     }
     &__location {
       width: 11.75rem;
       font-size: 0.9rem;
+      align-self: center;
     }
     &__header-date {
       display: none;
@@ -554,14 +567,15 @@ html, body {
     }
     &__container-one {
       display: flex;
-      width: 35rem;
+      width: 45rem;
+      margin: 0 auto;
     }
     &__container-one > p {
       display: flex;
     }
     &__header-date-one {
       @include shows-headers;
-      width: 14rem;
+      width: 10.6rem;
       font-size: 0.813rem;
       margin: auto 0;
     }
@@ -580,6 +594,7 @@ html, body {
     &__button {
       width: 10rem;
       font-size: 0.813rem;
+      align-self: center;
     }
   }
 
@@ -676,7 +691,6 @@ html, body {
       display: flex;
       align-self: flex-end;
       padding: 0 0 4.063rem 1.5rem;
-      
     }
   }
   .about {

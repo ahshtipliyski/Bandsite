@@ -1,6 +1,6 @@
-const apiKey = "7b95bc92-a319-4ff5-a56a-47ea95497abd";
+const apiKey = "<7b95bc92-a319-4ff5-a56a-47ea95497abd>";
 
-//creating default comments and pushing information from the array.
+//creating default comments and input data from the array.
 function displayComments(array) {
 let biggerContainer = document.querySelector(".comment__comments-array");
 biggerContainer.innerText = "";
@@ -28,7 +28,7 @@ biggerContainer.innerText = "";
 
     let name = document.createElement("h2");
     name.classList.add("comment__header-name");
-    name.innerText = array[i]["name"];
+    name.innerText = `${array[i].name}`;
     headerContainer.appendChild(name);
 
     let date = document.createElement("p");
@@ -42,7 +42,7 @@ biggerContainer.innerText = "";
 
     let comment = document.createElement("p");
     comment.classList.add("comment__text-comment");
-    comment.innerText = array[i]["comment"];
+    comment.innerText = `${array[i].comment}`;
     textContainer.appendChild(comment);
 
     let removeCommentContainer = document.createElement("div");
@@ -55,7 +55,7 @@ biggerContainer.innerText = "";
       let commentId = event.target.id;
       deleteComment(commentId);
     });
-    removeComment.id = array[i]["id"];
+    removeComment.id = `${array[i].id}`;
     removeComment.innerText = "Delete Comment";
     removeCommentContainer.appendChild(removeComment);
   }
@@ -68,14 +68,17 @@ form.addEventListener("submit", function(event) {
   event.preventDefault();
 
   let addComment = axios
-  .post(`https://project-1-api.herokuapp.com/comments?api_key=<${apiKey}>`,
+  .post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`,
     {
     name: event.target.name.value,
     comment: event.target.comment.value
     }
-  );
-  addComment.then(() => {
+  )
+  .then(() => {
     getComments();
+  })
+  .catch(error => {
+    console.log(error)
   })
 
   let clearForm = document.querySelector(".comment__input-container");
@@ -84,23 +87,33 @@ form.addEventListener("submit", function(event) {
 
   function getComments() {
     axios
-    .get(`https://project-1-api.herokuapp.com/comments?api_key=<${apiKey}>`)
+    .get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
     .then(response => {
+      response.data.forEach(array => {
+        displayComments(array);
+        console.log('this is foreach: ', response.data)
+      })
       displayComments(
         response.data.sort(function(a, b) {
-          return b.timestamp - a.timestamp;
+          return b.timestamp - a.timestamp
         })
-      );
-    });
+      )
+    })
+    .catch(error => {
+      console.log(error)
+    })
   };
   getComments();
 
   function deleteComment(id) {
     axios
-    .delete(`https://project-1-api.herokuapp.com/comments/${id}?api_key=<${apiKey}>`)
+    .delete(`https://project-1-api.herokuapp.com/comments/${id}?api_key=${apiKey}`)
     .then (response => {
       getComments();
-    });
+    })
+    .catch(error => {
+      console.log(error)
+    })
   }
 
 

@@ -1,36 +1,6 @@
-// const upcomingShows = [
-//   {
-//     date: "Mon Dec 17 2018",
-//     venue: "Ronald Lane",
-//     location: "San Francisco, CA"
-//   },
-//   {
-//     date: "Tue Jul 18 2019",
-//     venue: "Pier 3 East",
-//     location: "San Francisco, CA"
-//   },
-//   {
-//     date: "Fri Jul 22 2019",
-//     venue: "View Loungue",
-//     location: "San Francisco, CA"
-//   },
-//   {
-//     date: "Sat Aug 12 2019",
-//     venue: "Hyatt Agency",
-//     location: "San Francisco, CA"
-//   },
-//   {
-//     date: "Fri Sep 05 2019",
-//     venue: "Moscow Center",
-//     location: "San Francisco, CA"
-//   },
-//   {
-//     date: "Wed Aug 11 2019",
-//     venue: "Pres Club",
-//     location: "San Francisco, CA"
-//   }
-// ];
+const apiKey = "<7b95bc92-a319-4ff5-a56a-47ea95497abd>";
 
+//creating header container for dates / venue / location
 let parentTable = document.querySelector(".table__full");
 
 let tableContainerTop = document.createElement('div');
@@ -52,13 +22,14 @@ locationHeaderTop.classList.add('table__header-location-one');
 locationHeaderTop.innerText = ("LOCATION");
 tableContainerTop.appendChild(locationHeaderTop);
 
+//getting data from API
 upcomingShows = () => {
   axios
-    .get("https://project-1-api.herokuapp.com/showdates?api_key=<7b95bc92-a319-4ff5-a56a-47ea95497abd>")
+    .get(`https://project-1-api.herokuapp.com/showdates?api_key=${apiKey}`)
     .then(response => {
-      console.log(response.data)
-      response.data.forEach(post => {
-        showDates(post);
+      console.log(response.data) 
+      response.data.forEach(show => {
+        showDates(show);
       })
     })
     .catch(error => {
@@ -67,7 +38,8 @@ upcomingShows = () => {
 };
 upcomingShows();
 
-showDates = (post) => {
+//create containers and input data from API
+showDates = (show) => {
   let tableContainer = document.createElement('div');
   tableContainer.classList.add('table__container');
   parentTable.appendChild(tableContainer);
@@ -79,7 +51,7 @@ showDates = (post) => {
 
   let tableDate = document.createElement('p');
   tableDate.classList.add("table__date");
-  tableDate.innerText = `${post.date}`;
+  tableDate.innerText = `${show.date}`;
   tableContainer.appendChild(tableDate);
 
   let venueHeader = document.createElement('p');
@@ -89,7 +61,7 @@ showDates = (post) => {
 
   let tableVenue = document.createElement('p');
   tableVenue.classList.add("table__venue");
-  tableVenue.innerText = `${post.place}`
+  tableVenue.innerText = `${show.place}`
   tableContainer.appendChild(tableVenue);
 
   let locationHeader = document.createElement('p');
@@ -99,12 +71,11 @@ showDates = (post) => {
 
   let tableLocation = document.createElement('p');
   tableLocation.classList.add("table__location");
-  tableLocation.innerText = `${post.location}`;
+  tableLocation.innerText = `${show.location}`;
   tableContainer.appendChild(tableLocation);
 
   let tableButton = document.createElement('button');
   tableButton.classList.add("table__button");
   tableButton.innerHTML = ("BUY TICKETS");
   tableContainer.appendChild(tableButton);
-
 };
