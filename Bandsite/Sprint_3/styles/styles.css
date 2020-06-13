@@ -615,6 +615,9 @@ html, body {
   .hero__shows {
     height: 28rem;
   }
+  .hero__song {
+    width: 27rem;
+  }
 }
 
 @media (min-width: 768px) {
