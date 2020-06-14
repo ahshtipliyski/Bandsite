@@ -584,7 +584,7 @@ html, body {
     }
     &__header-venue-one {
       @include shows-headers;
-      width: 9.25rem;
+      width: 11rem;
       font-size: 0.813rem;
       margin: auto 0;
     }
@@ -825,6 +825,9 @@ html, body {
     &__people {
       width: 70%;
     }
+  }
+  .table__full {
+    width: 50rem;
   }
 }
 

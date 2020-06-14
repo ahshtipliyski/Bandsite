@@ -862,7 +862,7 @@ html, body {
     font-size: 0.875rem;
     font-family: 'Avenir-Demi';
     margin: 0.5rem 0;
-    width: 9.25rem;
+    width: 11rem;
     font-size: 0.813rem;
     margin: auto 0;
   }
@@ -1124,6 +1124,9 @@ html, body {
   }
   .contact__people {
     width: 70%;
+  }
+  .table__full {
+    width: 50rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

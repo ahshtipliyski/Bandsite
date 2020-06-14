@@ -5,9 +5,9 @@ function displayComments(array) {
 let biggerContainer = document.querySelector(".comment__comments-array");
 biggerContainer.innerText = "";
 
-  for (let i = 0; i < array.length; i++) {
+    array.forEach(function(array) {
 
-    let actualDate = new Date(array[i]["timestamp"]);
+    let actualDate = new Date(array["timestamp"]);
     let displayDate = actualDate.getUTCMonth() + 1 + "/" + actualDate.getUTCDate() + "/" + actualDate.getUTCFullYear();
 
     let commentContainer = document.createElement("div");
@@ -28,7 +28,7 @@ biggerContainer.innerText = "";
 
     let name = document.createElement("h2");
     name.classList.add("comment__header-name");
-    name.innerText = `${array[i].name}`;
+    name.innerText = `${array.name}`;
     headerContainer.appendChild(name);
 
     let date = document.createElement("p");
@@ -42,7 +42,7 @@ biggerContainer.innerText = "";
 
     let comment = document.createElement("p");
     comment.classList.add("comment__text-comment");
-    comment.innerText = `${array[i].comment}`;
+    comment.innerText = `${array.comment}`;
     textContainer.appendChild(comment);
 
     let removeCommentContainer = document.createElement("div");
@@ -55,10 +55,10 @@ biggerContainer.innerText = "";
       let commentId = event.target.id;
       deleteComment(commentId);
     });
-    removeComment.id = `${array[i].id}`;
+    removeComment.id = `${array.id}`;
     removeComment.innerText = "Delete Comment";
     removeCommentContainer.appendChild(removeComment);
-  }
+  })
 }
 
 
@@ -89,10 +89,6 @@ form.addEventListener("submit", function(event) {
     axios
     .get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
     .then(response => {
-      response.data.forEach(array => {
-        displayComments(array);
-        console.log('this is foreach: ', response.data)
-      })
       displayComments(
         response.data.sort(function(a, b) {
           return b.timestamp - a.timestamp
