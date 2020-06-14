@@ -5,7 +5,7 @@ function displayComments(array) {
 let biggerContainer = document.querySelector(".comment__comments-array");
 biggerContainer.innerText = "";
 
-    array.forEach(function(array) {
+    array.forEach(array => {
 
     let actualDate = new Date(array["timestamp"]);
     let displayDate = actualDate.getUTCMonth() + 1 + "/" + actualDate.getUTCDate() + "/" + actualDate.getUTCFullYear();
@@ -64,10 +64,10 @@ biggerContainer.innerText = "";
 
 const form = document.querySelector(".comment__input-container");
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", event => {
   event.preventDefault();
 
-  let addComment = axios
+  axios
   .post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`,
     {
     name: event.target.name.value,
@@ -110,6 +110,4 @@ form.addEventListener("submit", function(event) {
     .catch(error => {
       console.log(error)
     })
-  }
-
-
+  };

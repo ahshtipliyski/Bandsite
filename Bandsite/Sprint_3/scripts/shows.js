@@ -27,7 +27,6 @@ upcomingShows = () => {
   axios
     .get(`https://project-1-api.herokuapp.com/showdates?api_key=${apiKey}`)
     .then(response => {
-      console.log(response.data) 
       response.data.forEach(show => {
         showDates(show);
       })

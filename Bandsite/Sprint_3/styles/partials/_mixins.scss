@@ -63,6 +63,7 @@
   &:focus {
     border: 0.125rem solid $primary-color;
     box-sizing: border-box;
+    padding-left: 0.687rem;
   }
   &::placeholder {
     color: $primary-color;

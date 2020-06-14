@@ -298,6 +298,7 @@ html, body {
   border: 0.125rem solid #323232;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding-left: 0.687rem;
 }
 
 .comment__text-container-name::-webkit-input-placeholder {
@@ -340,6 +341,7 @@ html, body {
   border: 0.125rem solid #323232;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding-left: 0.687rem;
 }
 
 .comment__text-container-comment::-webkit-input-placeholder {
@@ -360,6 +362,10 @@ html, body {
 .comment__text-container-comment::placeholder {
   color: #323232;
   font-size: 0.875rem;
+}
+
+.comment__text-container-comment:focus {
+  padding-top: 0.687rem;
 }
 
 .comment__button {
@@ -1055,8 +1061,14 @@ html, body {
     margin-bottom: 1.5rem;
     padding-left: 1rem;
   }
+  .comment__text-container-name:focus {
+    padding-left: 0.937rem;
+  }
   .comment__text-container-comment {
     padding: 1rem 0 0 1rem;
+  }
+  .comment__text-container-comment:focus {
+    padding: 0.937rem 0 0 0.937rem;
   }
   .comment__button {
     margin: 1.5rem 0;

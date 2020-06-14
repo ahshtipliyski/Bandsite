@@ -190,6 +190,9 @@ html, body {
     padding-top: 0.75rem;
     resize: none;
     @include text-container;
+    &:focus {
+      padding-top: 0.687rem;
+    }
   }
   &__button {
     background-color: $primary-color;
@@ -746,9 +749,15 @@ html, body {
       height: 3rem;
       margin-bottom: 1.5rem;
       padding-left: 1rem;
+      &:focus {
+        padding-left: 0.937rem;
+      }
     }
     &__text-container-comment {
       padding: 1rem 0 0 1rem;
+      &:focus {
+        padding: 0.937rem 0 0 0.937rem;
+      }
     }
     &__button {
       margin: 1.5rem 0;
