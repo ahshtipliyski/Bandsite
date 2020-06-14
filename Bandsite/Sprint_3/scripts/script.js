@@ -7,7 +7,7 @@ biggerContainer.innerText = "";
 
     array.forEach(array => {
 
-    let actualDate = new Date(array["timestamp"]);
+    let actualDate = new Date(array.timestamp);
     let displayDate = actualDate.getUTCMonth() + 1 + "/" + actualDate.getUTCDate() + "/" + actualDate.getUTCFullYear();
 
     let commentContainer = document.createElement("div");
