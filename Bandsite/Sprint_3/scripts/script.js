@@ -104,7 +104,7 @@ form.addEventListener("submit", event => {
   function deleteComment(id) {
     axios
     .delete(`https://project-1-api.herokuapp.com/comments/${id}?api_key=${apiKey}`)
-    .then (response => {
+    .then (() => {
       getComments();
     })
     .catch(error => {
